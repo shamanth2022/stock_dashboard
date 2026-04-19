@@ -16,7 +16,7 @@ def compute_indicators(df):
 
 def generate_signals(df):
     latest = df.iloc[-1]
-
+    print(latest)
     if latest["RSI"] < 40 and latest["Close"] < latest["MA50"]:
         return "STRONG_BUY"
     elif latest["RSI"] < 50 and latest["Close"] < latest["MA50"]:
